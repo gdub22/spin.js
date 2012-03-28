@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>spin.js</title>
+  <style type="text/css">
+  .preview {
+    background: #333333;
+	color:#FFFFFF;
+    width: 220px;
+    height: 220px;
+    margin: 0 20px;
+    float: left;
+    border-radius: 10px;
+  }
+  </style>
+</head>
+<body>
+
+<div id="preview1" class="preview"></div>
+
+<!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>-->
+<script src="http://cdnjs.cloudflare.com/ajax/libs/zepto/0.8/zepto.min.js"></script>
+<script src="../dist/spin.modern.min.js"></script>
+<script>
+  //Spinner({radius: 10, length: 10, color:'#FFFFFF'}).spin(document.getElementById('preview1'));
+  $('#preview1').spin({radius: 10, length: 10, color:'#FFCC00'});
+
+  //Remove spinner upon click (Zepto needs data.js addon for this)
+  $('.preview').click(function() {
+    $(this).spin(false);
+  });
+</script>
+
+</body>
+</html>
